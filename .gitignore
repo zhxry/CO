@@ -91,4 +91,7 @@
 !*.md
 !*.png
 !*.jpg
+!*.pdf
 /Labs_std
+/docs
+/Slides
