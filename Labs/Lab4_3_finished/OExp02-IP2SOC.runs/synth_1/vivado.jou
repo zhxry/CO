@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May  6 19:56:41 2024
+# Process ID: 50304
+# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.runs/synth_1
+# Command line: vivado.exe -log CSSTE.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CSSTE.tcl
+# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.runs/synth_1/CSSTE.vds
+# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CSSTE.tcl -notrace

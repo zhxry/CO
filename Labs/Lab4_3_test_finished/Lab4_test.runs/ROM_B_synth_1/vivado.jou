@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 26 12:20:54 2024
+# Process ID: 50364
+# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab4_3_test_finished/Lab4_test.runs/ROM_B_synth_1
+# Command line: vivado.exe -log ROM_B.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROM_B.tcl
+# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab4_3_test_finished/Lab4_test.runs/ROM_B_synth_1/ROM_B.vds
+# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab4_3_test_finished/Lab4_test.runs/ROM_B_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ROM_B.tcl -notrace

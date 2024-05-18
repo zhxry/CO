@@ -1,0 +1,3 @@
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_4,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,
+RAM.v,verilog,xil_defaultlib,../../../../OExp02-IP2SOC.gen/sources_1/ip/RAM/sim/RAM.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

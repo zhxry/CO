@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  5 21:49:29 2024
+# Process ID: 20756
+# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.sim/sim_1/behav/xsim/xsim.dir/ImmGen_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/OExp02-IP2SOC_Lab4_3_finished/OExp02-IP2SOC.sim/sim_1/behav/xsim/xsim.dir/ImmGen_tb_behav/webtalk/xsim_webtalk.tcl -notrace
