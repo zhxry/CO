@@ -27,9 +27,7 @@ module Ex (
     input [31:0] Imm_in,
     input UT,
     input ALUSrc_B,
-    // input [1:0] Branch,
     input [3:0] ALU_control,
-    // output [31:0] PC_out,
     output [31:0] UI_out,
     output [31:0] ALU_out,
     output [31:0] PCP4_out,
@@ -37,8 +35,6 @@ module Ex (
 );
 
     wire [31:0] M2_0_res;
-    // wire [31:0] PCP4_out;
-    // wire [31:0] PCPI_out;
 
     add_32 A0 (
         .A(PC_in),
@@ -58,13 +54,6 @@ module Ex (
         .S(ALUSrc_B),
         .O(M2_0_res)
     );
-
-    // MUX2T1_32 M2_1 (
-    //     .I0(PCP4_out),
-    //     .I1(PCPI_out),
-    //     .S((Branch[0] & ALU_out[0]) | (Branch[1] & (~ALU_out[0]))),
-    //     .O(PC_out)
-    // );
 
     MUX2T1_32 M2_2 (
         .I0(Imm_in),

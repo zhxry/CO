@@ -97,6 +97,8 @@ module PCPU (
     wire [1:0] MemtoReg_ID_Ex;
     wire [3:0] ALU_control_ID_Ex;
 
+    wire bubble;
+
     wire [31:0] UI_out_Ex;
     wire [31:0] ALU_out_Ex;
     wire [31:0] PCP4_out_Ex;
@@ -132,8 +134,6 @@ module PCPU (
     IF Instruction_Fetch (
         .clk(clk),
         .rst(rst),
-        // .PC_Src(PC_Src_Mem),
-        // .PC_in(PC_EX_Mem),
         .PC_in(PC_Mem),
         .PC_out(PC_out_IF)
     );
@@ -235,6 +235,20 @@ module PCPU (
         .SLType_out(SLType_ID_Ex),
         .MemtoReg_out(MemtoReg_ID_Ex),
         .ALU_Control_out(ALU_control_ID_Ex)
+    );
+
+    StallUnit HazardDetection (
+        .jump(Branch_ID[0] | Branch_ID[1]),
+        .MemRead_ID_Ex(SLType_ID_Ex[0] | SLType_ID_Ex[1]),
+        .RegWrite_ID_Ex(RegWrite_ID_Ex),
+        .Rd_ID_Ex(Rd_addr_ID_Ex),
+        .Rs1_IF_ID(inst_out_IF_ID[19:15]),
+        .Rs2_IF_ID(inst_out_IF_ID[24:20]),
+        .bubble(bubble)
+    );
+
+    ForwardingUnit ForwardingUnit (
+        
     );
 
     Ex Execute (
