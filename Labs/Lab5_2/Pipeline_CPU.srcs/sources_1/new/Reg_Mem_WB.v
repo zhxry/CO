@@ -21,6 +21,7 @@
 
 
 module Reg_Mem_WB (
+    input en,
     input clk,
     input rst,
     input Unsigned_in,
@@ -54,7 +55,7 @@ module Reg_Mem_WB (
             ALU_out <= 32'b0;
             Data_out <= 32'b0;
             PCP4_out <= 32'b0;
-        end else begin
+        end else if (en) begin
             Unsigned_out <= Unsigned_in;
             RegWrite_out <= RegWrite_in;
             SLType_out <= SLType_in;

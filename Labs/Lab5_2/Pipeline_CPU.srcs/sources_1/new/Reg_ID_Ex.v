@@ -21,6 +21,7 @@
 
 
 module Reg_ID_Ex (
+    input en,
     input clk,
     input rst,
     input [31:0] PC_in,
@@ -72,7 +73,7 @@ module Reg_ID_Ex (
             SLType_out <= 2'b0;
             MemtoReg_out <= 2'b0;
             ALU_Control_out <= 4'b0;
-        end else begin
+        end else if (en) begin
             PC_out <= PC_in;
             Rd_addr_out <= Rd_addr_in;
             Rs1_out <= Rs1_in;

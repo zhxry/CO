@@ -21,8 +21,11 @@
 
 
 module Reg_IF_ID (
+    input en,
     input clk,
     input rst,
+    input flush,
+    input stall,
     input [31:0] PC_in,
     input [31:0] inst_in,
     output reg [31:0] PC_out,
@@ -33,9 +36,17 @@ module Reg_IF_ID (
         if (rst) begin
             PC_out <= 32'b0;
             inst_out <= 32'b0;
-        end else begin
-            PC_out <= PC_in;
-            inst_out <= inst_in;
+        end else if (en) begin
+            if (stall) begin
+                PC_out <= PC_out;
+                inst_out <= inst_out;
+            end else if (flush) begin
+                PC_out <= PC_out;
+                inst_out <= 32'h00000013;
+            end else begin
+                PC_out <= PC_in;
+                inst_out <= inst_in;
+            end
         end
     end
 

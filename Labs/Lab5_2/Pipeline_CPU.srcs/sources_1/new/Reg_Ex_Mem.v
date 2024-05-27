@@ -21,6 +21,7 @@
 
 
 module Reg_Ex_Mem (
+    input en,
     input clk,
     input rst,
     input MemRW_in,
@@ -66,7 +67,7 @@ module Reg_Ex_Mem (
             Rs2_out <= 32'b0;
             PCP4_out <= 32'b0;
             PCPI_out <= 32'b0;
-        end else begin
+        end else if (en) begin
             MemRW_out <= MemRW_in;
             Unsigned_out <= Unsigned_in;
             RegWrite_out <= RegWrite_in;

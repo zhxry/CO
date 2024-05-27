@@ -23,6 +23,7 @@
 module IF (
     input clk,
     input rst,
+    input stall,
     input [31:0] PC_in,
     output [31:0] PC_out
 );
@@ -30,7 +31,7 @@ module IF (
     REG32 PC (
         .clk(clk),
         .rst(rst),
-        .CE(1'b1),
+        .CE(~stall),
         .D(PC_in),
         .Q(PC_out)
     );

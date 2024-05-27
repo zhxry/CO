@@ -55,7 +55,7 @@ module Reg_ID_Ex (
     output reg [3:0] ALU_Control_out
 );
 
-    always @(posedge clk or posedge rst) begin
+    always @(negedge clk or posedge rst) begin
         if (rst) begin
             PC_out <= 32'b0;
             Rd_addr_out <= 5'b0;
