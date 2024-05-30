@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu May 30 19:12:51 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri May 31 00:04:45 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "96347748-e574-49a4-b646-e070a48395e0" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "3e34b95beaaf436895a20ea9b787113c" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "44" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "64" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 7 6800HS Creator Edition" -context "user_environment"
@@ -33,10 +33,10 @@ webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\comman
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "188 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Image_Data -value "25 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "378" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "380" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "39" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "1.59_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "95376_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2140181590 -regid "" -xml D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "2.36_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "95768_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2030993 -regid "" -xml D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.sim/sim_1/behav/xsim/xsim.dir/testbench_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

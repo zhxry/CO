@@ -47,13 +47,13 @@ module ForwardingUnit (
             if (RegWrite_Ex_Mem && Rd_Ex_Mem != 0 && Rs1_ID_Ex == Rd_Ex_Mem) begin
                 case (MemtoReg_Ex_Mem)
                     2'b10: Forward_rs1 = 3'b100; // PC + 4
-                    2'b11: Forward_rs1 = 3'b110; // Imm
+                    2'b11: Forward_rs1 = 3'b110; // lui/auipc
                     default: Forward_rs1 = 3'b001; // ALU_res
                 endcase
             end else if (RegWrite_Mem_WB && Rd_Mem_WB != 0 && Rs1_ID_Ex == Rd_Mem_WB) begin
                 case (MemtoReg_Mem_WB)
                     2'b10: Forward_rs1 = 3'b101; // PC + 4
-                    2'b11: Forward_rs1 = 3'b111; // Imm
+                    2'b11: Forward_rs1 = 3'b111; // lui/auipc
                     default: Forward_rs1 = 3'b010; // ALU/Mem
                 endcase
             end else Forward_rs1 = 3'b000;
@@ -65,13 +65,13 @@ module ForwardingUnit (
             if (RegWrite_Ex_Mem && Rd_Ex_Mem != 0 && Rs2_ID_Ex == Rd_Ex_Mem) begin
                 case (MemtoReg_Ex_Mem)
                     2'b10: Forward_rs2 = 3'b100; // PC + 4
-                    2'b11: Forward_rs2 = 3'b110; // Imm
+                    2'b11: Forward_rs2 = 3'b110; // lui/auipc
                     default: Forward_rs2 = 3'b001; // ALU_res
                 endcase
             end else if (RegWrite_Mem_WB && Rd_Mem_WB != 0 && Rs2_ID_Ex == Rd_Mem_WB) begin
                 case (MemtoReg_Mem_WB)
                     2'b10: Forward_rs2 = 3'b101; // PC + 4
-                    2'b11: Forward_rs2 = 3'b111; // Imm
+                    2'b11: Forward_rs2 = 3'b111; // lui/auipc
                     default: Forward_rs2 = 3'b010; // Mem
                 endcase
             end else Forward_rs2 = 3'b000;

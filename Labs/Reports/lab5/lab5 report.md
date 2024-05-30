@@ -44,8 +44,25 @@
 
 ### 仿真代码设计
 
-```verilog
-// 如果你需要插入代码，请使用代码块（Verilog）
+```asm
+addi    x1, x0, 1          # x1 = 0x00000001
+addi    x2, x1, 2          # x2 = 0x00000003
+addi    x3, x2, 3          # x3 = 0x00000006
+add     x2, x2, x1         # x2 = 0x00000004
+add     x1, x2, x0         # x1 = 0x00000004
+add     x3, x1, x2         # x3 = 0x00000008
+add     x3, x3, x3         # x3 = 0x00000010
+add     x3, x3, x3         # x3 = 0x00000020
+sw      x3, 0(x0)          # mem[0] = 0x00000020
+lw      x4, 0(x0)          # x4 = 0x00000020
+addi    x5, x4, 4          # x5 = 0x00000024
+addi    x6, x4, 5          # x6 = 0x00000025
+
+lui     x1, 0xAAAAA        # x1 = 0xAAAAA000
+addi    x2, x1, 2          # x2 = 0xAAAAA002
+auipc   x2, 0xBBBBB        # x2 = 0xBBBBB038
+nop
+addi    x3, x2, 1          # x3 = 0xBBBBB039
 ```
 
 ## 实验结果与分析

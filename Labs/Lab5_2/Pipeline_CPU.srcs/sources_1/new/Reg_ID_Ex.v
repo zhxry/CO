@@ -37,8 +37,8 @@ module Reg_ID_Ex (
     input ALUSrc_B_in,
     input Unsigned_in,
     input RegWrite_in,
-    input [1:0] Jump_in,
-    input [1:0] Branch_in,
+    // input [1:0] Jump_in,
+    // input [1:0] Branch_in,
     input [1:0] SLType_in,
     input [1:0] MemtoReg_in,
     input [3:0] ALU_Control_in,
@@ -54,8 +54,8 @@ module Reg_ID_Ex (
     output reg ALUSrc_B_out,
     output reg Unsigned_out,
     output reg RegWrite_out,
-    output reg [1:0] Jump_out,
-    output reg [1:0] Branch_out,
+    // output reg [1:0] Jump_out,
+    // output reg [1:0] Branch_out,
     output reg [1:0] SLType_out,
     output reg [1:0] MemtoReg_out,
     output reg [3:0] ALU_Control_out
@@ -75,8 +75,8 @@ module Reg_ID_Ex (
             ALUSrc_B_out <= 1'b0;
             Unsigned_out <= 1'b0;
             RegWrite_out <= 1'b0;
-            Jump_out <= 2'b0;
-            Branch_out <= 2'b0;
+            // Jump_out <= 2'b0;
+            // Branch_out <= 2'b0;
             SLType_out <= 2'b0;
             MemtoReg_out <= 2'b0;
             ALU_Control_out <= 4'b0;
@@ -94,8 +94,8 @@ module Reg_ID_Ex (
                 ALUSrc_B_out <= 1'b0;
                 Unsigned_out <= 1'b0;
                 RegWrite_out <= 1'b0;
-                Jump_out <= 2'b0;
-                Branch_out <= 2'b0;
+                // Jump_out <= 2'b0;
+                // Branch_out <= 2'b0;
                 SLType_out <= 2'b0;
                 MemtoReg_out <= 2'b0;
                 ALU_Control_out <= 4'b0;
@@ -112,8 +112,8 @@ module Reg_ID_Ex (
                 ALUSrc_B_out <= ALUSrc_B_in;
                 Unsigned_out <= Unsigned_in;
                 RegWrite_out <= RegWrite_in;
-                Jump_out <= Jump_in;
-                Branch_out <= Branch_in;
+                // Jump_out <= Jump_in;
+                // Branch_out <= Branch_in;
                 SLType_out <= SLType_in;
                 MemtoReg_out <= MemtoReg_in;
                 ALU_Control_out <= ALU_Control_in;

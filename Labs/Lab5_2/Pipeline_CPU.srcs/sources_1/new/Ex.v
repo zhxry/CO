@@ -30,10 +30,11 @@ module Ex (
     input [3:0] ALU_control,
     output [31:0] UI_out,
     output [31:0] ALU_out,
-    output [31:0] PCP4_out,
-    output [31:0] PCPI_out
+    output [31:0] PCP4_out
+    // output [31:0] PCPI_out
 );
 
+    wire [31:0] PCPI;
     wire [31:0] M2_0_res;
 
     add_32 A0 (
@@ -45,7 +46,7 @@ module Ex (
     add_32 A1 (
         .A(PC_in),
         .B(Imm_in),
-        .O(PCPI_out)
+        .O(PCPI)
     );
 
     MUX2T1_32 M2_0 (
@@ -57,7 +58,7 @@ module Ex (
 
     MUX2T1_32 M2_2 (
         .I0(Imm_in),
-        .I1(PCPI_out),
+        .I1(PCPI),
         .S(UT),
         .O(UI_out)
     );
