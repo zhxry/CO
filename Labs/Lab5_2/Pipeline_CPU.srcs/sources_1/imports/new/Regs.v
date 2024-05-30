@@ -103,7 +103,7 @@ module Regs(
     assign Rs1_data = (Rs1_addr == 0) ? 0 : Regs[Rs1_addr];
     assign Rs2_data = (Rs2_addr == 0) ? 0 : Regs[Rs2_addr];
 
-    always @(posedge clk or posedge rst) begin
+    always @(negedge clk or posedge rst) begin
         if (rst) for (i = 0; i < 32; i = i + 1) Regs[i] <= 0;
         else if (RegWrite && Wt_addr != 0) Regs[Wt_addr] <= Wt_data;
     end

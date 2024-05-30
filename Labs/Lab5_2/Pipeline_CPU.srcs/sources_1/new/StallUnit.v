@@ -22,7 +22,7 @@
 
 module StallUnit (
     input jump, // calculated by |Branch[1:0]
-    input MemRead_ID_Ex, // calculated by |SLType[1:0]
+    input MemRead_ID_Ex, // calculated by (|SLType[1:0]) & RegWrite
     input RegWrite_ID_Ex,
     input [4:0] Rd_ID_Ex,
     input [4:0] Rs1_IF_ID,
@@ -30,7 +30,7 @@ module StallUnit (
     output bubble
 );
 
-    assign bubble = (MemRead_ID_Ex || (jump && RegWrite_ID_Ex && ID_Ex_rd != 0))
+    assign bubble = (MemRead_ID_Ex || (jump && RegWrite_ID_Ex && Rd_ID_Ex != 0))
                  && (Rs1_IF_ID == Rd_ID_Ex || Rs2_IF_ID == Rd_ID_Ex);
 
 endmodule

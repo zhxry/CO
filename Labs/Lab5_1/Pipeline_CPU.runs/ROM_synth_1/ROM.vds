@@ -2,14 +2,17 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri May 17 19:54:17 2024
-# Process ID: 11896
-# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1
+# Start of session at: Tue May 28 14:06:23 2024
+# Process ID: 38352
+# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1
 # Command line: vivado.exe -log ROM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROM.tcl
-# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/ROM.vds
-# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1\vivado.jou
+# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/ROM.vds
+# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1\vivado.jou
 #-----------------------------------------------------------
 source ROM.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab2-attachment/OExp02-IP2SOC/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top ROM -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
@@ -17,11 +20,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4536
+INFO: [Synth 8-7075] Helper process launched with PID 27612
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:66]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
@@ -54,55 +57,55 @@ INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Karnage/ZJU/Courses/23-24SpSu/
 	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
 	Parameter C_WIDTH bound to: 32 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_13' declared at 'd:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_13' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:132]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (4#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:66]
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_13' declared at 'd:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_13' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (4#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/synth/ROM.vhd:66]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1000.715 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/ROM_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.gen/sources_1/ip/ROM/ROM_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/ROM_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.gen/sources_1/ip/ROM/ROM_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1000.715 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -124,7 +127,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1009.746 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1000.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -145,19 +148,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1021.836 ; gain = 12.090
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1019.988 ; gain = 19.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1021.910 ; gain = 12.164
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1020.137 ; gain = 19.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1041.016 ; gain = 31.270
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1040.195 ; gain = 39.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -175,37 +178,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -218,40 +221,34 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |LUT2  |     2|
-|2     |LUT3  |     4|
-|3     |LUT4  |     5|
-|4     |LUT5  |    35|
-|5     |LUT6  |    47|
-|6     |MUXF7 |     9|
-+------+------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT5 |     4|
+|2     |LUT6 |    79|
++------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1048.258 ; gain = 38.512
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1048.258 ; gain = 38.512
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 1055.945 ; gain = 55.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1055.945 ; gain = 55.230
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1059.359 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1068.012 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1062.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1070.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1062.887 ; gain = 53.141
-INFO: [Common 17-1381] The checkpoint 'D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/ROM.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:43 . Memory (MB): peak = 1070.875 ; gain = 70.160
+INFO: [Common 17-1381] The checkpoint 'D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/ROM.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ROM, cache-ID = a93143aa9a8f9fdd
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ROM, cache-ID = 0e53e08aaec2e9dd
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Pipeline_CPU/Pipeline_CPU.runs/ROM_synth_1/ROM.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_1/Pipeline_CPU.runs/ROM_synth_1/ROM.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ROM_utilization_synth.rpt -pb ROM_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 17 19:54:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue May 28 14:07:19 2024...

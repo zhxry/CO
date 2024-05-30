@@ -46,6 +46,7 @@ module SCPU_ctrl (
     // RegWrite: 0: No, 1: Yes
     // MemRW: 0: No/Read, 1: Write
     // Jump: 00: No/SB-type, 01: jal, 10: jalr
+    // Branch: 01: beq/blt/bltu, 10: bne/bge/bgeu
     // ALUOp: 00: add, 01: sub(SB-type), 10: case(R-type), 11: case(I-type(ALU))
     // Unsigned: 0: lw/lb/lh, 1: lbu/lhu
     // SLType: 01: lw/sw, 10: lb/sb/lbu, 11: lh/sh/lhu
@@ -75,7 +76,6 @@ module SCPU_ctrl (
             5'b01101: {ALUSrc_B, MemtoReg, RegWrite, MemRW, Jump, ALUOp, Unsigned, SLType} = 12'b011100000000; // lui
             5'b00101: {ALUSrc_B, MemtoReg, RegWrite, MemRW, Jump, ALUOp, Unsigned, SLType} = 12'b011100000000; // auipc
         endcase
-        // Branch: 01: beq/blt/bltu, 10: bne/bge/bgeu
         Branch[0] = (OPcode == 5'b11000 && (Fun3 == 3'b000 || Fun3 == 3'b100 || Fun3 == 3'b110)) ? 1'b1 : 1'b0;
         Branch[1] = (OPcode == 5'b11000 && (Fun3 == 3'b001 || Fun3 == 3'b101 || Fun3 == 3'b111)) ? 1'b1 : 1'b0;
         // UT: 1 auipc, 0 lui

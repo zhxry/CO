@@ -24,9 +24,22 @@ module IF (
     input clk,
     input rst,
     input stall,
-    input [31:0] PC_in,
+    input ALU_0,
+    input [1:0] Jump,
+    input [1:0] Branch,
+    input [31:0] PCPI,
+    input [31:0] PC_jalr,
+    // input [31:0] PC_in,
     output [31:0] PC_out
 );
+
+    wire JB;
+    wire [31:0] PC_in;
+
+    assign PC_in = (Jump == 2'b01) ? PCPI : // jal
+                   (Jump == 2'b10) ? PC_jalr : // jalr
+                   ((Branch[0] & ALU_0) | (Branch[1] & ~ALU_0)) ? PCPI : // branch ok
+                   (Jump[0] | Jump[1] | Branch[0] | Branch[1]) ? PC_out : PC_out + 4; // bubble_stop
 
     REG32 PC (
         .clk(clk),
