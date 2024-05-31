@@ -29,7 +29,6 @@ module IF (
     input [1:0] Branch,
     input [31:0] PCPI,
     input [31:0] PC_jalr,
-    // input [31:0] PC_in,
     output [31:0] PC_out
 );
 

@@ -86,15 +86,13 @@ module PCPU (
     wire [31:0] Rs1_out_ID_Ex;
     wire [31:0] Rs2_out_ID_Ex;
     wire [31:0] Imm_out_ID_Ex;
-    wire [31:0] Rs1_addr_ID_Ex;
-    wire [31:0] Rs2_addr_ID_Ex;
+    wire [4:0] Rs1_addr_ID_Ex;
+    wire [4:0] Rs2_addr_ID_Ex;
     wire UT_ID_Ex;
     wire MemRW_ID_Ex;
     wire ALUSrc_B_ID_Ex;
     wire Unsigned_ID_Ex;
     wire RegWrite_ID_Ex;
-    // wire [1:0] Jump_ID_Ex;
-    // wire [1:0] Branch_ID_Ex;
     wire [1:0] SLType_ID_Ex;
     wire [1:0] MemtoReg_ID_Ex;
     wire [3:0] ALU_control_ID_Ex;
@@ -104,28 +102,20 @@ module PCPU (
     wire [31:0] UI_Ex;
     wire [31:0] ALU_out_Ex;
     wire [31:0] PCP4_out_Ex;
-    // wire [31:0] PCPI_out_Ex;
 
     wire MemRW_Ex_Mem;
     wire Unsigned_Ex_Mem;
     wire RegWrite_Ex_Mem;
-    // wire [1:0] Jump_Ex_Mem;
-    // wire [1:0] Branch_Ex_Mem;
     wire [1:0] SLType_Ex_Mem;
     wire [1:0] MemtoReg_Ex_Mem;
     wire [4:0] Rd_addr_Ex_Mem;
     wire [31:0] UI_Ex_Mem;
     wire [31:0] ALU_out_Ex_Mem;
-    wire [31:0] Rs2_out_Ex_Mem;
     wire [31:0] PCP4_Ex_Mem;
-    // wire [31:0] PCPI_Ex_Mem;
 
-    // wire [31:0] PC_Mem;
     wire [31:0] Data_out_Mem;
 
-    wire Unsigned_Mem_WB;
     wire RegWrite_Mem_WB;
-    wire [1:0] SLType_Mem_WB;
     wire [1:0] MemtoReg_Mem_WB;
     wire [4:0] Rd_addr_Mem_WB;
     wire [31:0] UI_Mem_WB;
@@ -139,11 +129,16 @@ module PCPU (
     wire [1:0] Forward_to_Mem;
     wire [31:0] Rs1_M8_out, Rs2_M8_out;
 
+    wire JB, ALU_0;
+    wire [4:0] Rs1_addr_IF_ID, Rs2_addr_IF_ID;
+    wire [31:0] tmp, reg1, reg2;
+
+    wire [31:0] Data_in_Mem;
+
     IF Instruction_Fetch (
         .clk(clk),
         .rst(rst),
         .stall(bubble),
-        // .PC_in(PC_Mem),
         .ALU_0(ALU_0),
         .Jump(Jump_ID),
         .Branch(Branch_ID),
@@ -219,18 +214,13 @@ module PCPU (
         .t6(t6)
     );
 
-    wire JB, ALU_0;
-    wire [31:0] Rs1_addr_IF_ID, Rs2_addr_IF_ID, tmp, reg1, reg2;
-
     assign JB = Jump_ID[0] | Jump_ID[1] | Branch_ID[0] | Branch_ID[1];
     assign Rs1_addr_IF_ID = inst_out_IF_ID[19:15];
     assign Rs2_addr_IF_ID = inst_out_IF_ID[24:20];
 
-    // assign reg1 = Rs1_out_ID;
-    // assign reg2 = Rs2_out_ID;
     MUX4T1_32 M4_tmp (
         .I0(ALU_out_Ex_Mem),
-        .I1(Data_in),
+        .I1(Data_in_Mem),
         .I2(PCP4_Ex_Mem),
         .I3(UI_Ex_Mem),
         .S(MemtoReg_Ex_Mem),
@@ -260,8 +250,6 @@ module PCPU (
         .ALUSrc_B_in(ALUSrc_B_ID),
         .Unsigned_in(Unsigned_ID),
         .RegWrite_in(RegWrite_ID),
-        // .Jump_in(Jump_ID),
-        // .Branch_in(Branch_ID),
         .SLType_in(SLType_ID),
         .MemtoReg_in(MemtoReg_ID),
         .ALU_Control_in(ALU_control_ID),
@@ -277,8 +265,6 @@ module PCPU (
         .ALUSrc_B_out(ALUSrc_B_ID_Ex),
         .Unsigned_out(Unsigned_ID_Ex),
         .RegWrite_out(RegWrite_ID_Ex),
-        // .Jump_out(Jump_ID_Ex),
-        // .Branch_out(Branch_ID_Ex),
         .SLType_out(SLType_ID_Ex),
         .MemtoReg_out(MemtoReg_ID_Ex),
         .ALU_Control_out(ALU_control_ID_Ex)
@@ -338,8 +324,6 @@ module PCPU (
 
     Ex Execute (
         .PC_in(PC_ID_Ex),
-        // .Rs1_in(Rs1_out_ID_Ex),
-        // .Rs2_in(Rs2_out_ID_Ex),
         .Rs1_in(Rs1_M8_out),
         .Rs2_in(Rs2_M8_out),
         .Imm_in(Imm_out_ID_Ex),
@@ -349,19 +333,29 @@ module PCPU (
         .UI_out(UI_Ex),
         .ALU_out(ALU_out_Ex),
         .PCP4_out(PCP4_out_Ex)
-        // .PCPI_out(PCPI_out_Ex)
     );
 
     wire [31:0] Data_to_Mem_M4;
+    wire [31:0] Rs2_out_Ex;
+
+    MemRWProcess MP_Ex (
+        .MemRW_in(MemRW_ID_Ex),
+        .Addr(ALU_out_Ex[1:0]),
+        .SLType(SLType_ID_Ex),
+        .Rs2_data(Rs2_out_ID_Ex),
+        .Data_out(Rs2_out_Ex)
+    );
 
     MUX4T1_32 M4_to_Mem (
         .I0(Rs2_out_ID_Ex),
         .I1(ALU_out_Ex_Mem),
-        .I2(Data_out_Mem),
-        .I3(32'b0),
+        .I2(Data_to_Reg_WB),
+        .I3(UI_Ex_Mem),
         .S(Forward_to_Mem),
         .O(Data_to_Mem_M4)
     );
+
+    wire [31:0] Data_to_Mem_out;
 
     Reg_Ex_Mem Register_Ex_Mem (
         .en(1'b1),
@@ -370,48 +364,38 @@ module PCPU (
         .MemRW_in(MemRW_ID_Ex),
         .Unsigned_in(Unsigned_ID_Ex),
         .RegWrite_in(RegWrite_ID_Ex),
-        // .Jump_in(Jump_ID_Ex),
-        // .Branch_in(Branch_ID_Ex),
         .SLType_in(SLType_ID_Ex),
         .MemtoReg_in(MemtoReg_ID_Ex),
         .Rd_addr_in(Rd_addr_ID_Ex),
         .UI_in(UI_Ex),
         .ALU_in(ALU_out_Ex),
-        // .Rs2_in(Rs2_out_ID_Ex),
-        .Rs2_in(Rs2_M8_out),
         .PCP4_in(PCP4_out_Ex),
-        // .PCPI_in(PCPI_out_Ex),
         .Data_to_Mem_in(Data_to_Mem_M4),
         .MemRW_out(MemRW_Ex_Mem),
         .Unsigned_out(Unsigned_Ex_Mem),
         .RegWrite_out(RegWrite_Ex_Mem),
-        // .Jump_out(Jump_Ex_Mem),
-        // .Branch_out(Branch_Ex_Mem),
         .SLType_out(SLType_Ex_Mem),
         .MemtoReg_out(MemtoReg_Ex_Mem),
         .Rd_addr_out(Rd_addr_Ex_Mem),
         .UI_out(UI_Ex_Mem),
         .ALU_out(ALU_out_Ex_Mem),
-        .Rs2_out(Rs2_out_Ex_Mem),
         .PCP4_out(PCP4_Ex_Mem),
-        // .PCPI_out(PCPI_Ex_Mem)
-        .Data_to_Mem_out(Data_to_Mem)
+        .Data_to_Mem_out(Data_to_Mem_out)
     );
 
     assign Addr_out = ALU_out_Ex_Mem;
 
     Mem Memory_Access (
+        .Unsigned(Unsigned_Ex_Mem),
         .MemRW_in(MemRW_Ex_Mem),
-        // .Jump(Jump_Ex_Mem),
-        // .Branch(Branch_Ex_Mem),
         .SLType(SLType_Ex_Mem),
         .PCP4(PCP4_Ex_Mem),
-        // .PCPI(PCPI_Ex_Mem),
         .ALU_in(Addr_out),
-        .Rs2_in(Rs2_out_Ex_Mem),
+        .Rs2_in(Data_to_Mem_out),
         .MemRW_out(MemRW_out),
-        // .PC_out(PC_Mem),
-        .Data_to_Mem(Data_out_Mem)
+        .Data_in(Data_in),
+        .Data_in_Mem(Data_in_Mem),
+        .Data_to_Mem(Data_to_Mem)
     );
 
     // assign Data_to_Mem = Data_out_Mem;
@@ -420,18 +404,14 @@ module PCPU (
         .en(1'b1),
         .clk(clk),
         .rst(rst),
-        .Unsigned_in(Unsigned_Ex_Mem),
         .RegWrite_in(RegWrite_Ex_Mem),
-        .SLType_in(SLType_Ex_Mem),
         .MemtoReg_in(MemtoReg_Ex_Mem),
         .Rd_addr_in(Rd_addr_Ex_Mem),
         .UI_in(UI_Ex_Mem),
         .ALU_in(Addr_out),
-        .Data_in(Data_in),
+        .Data_in(Data_in_Mem),
         .PCP4_in(PCP4_Ex_Mem),
-        .Unsigned_out(Unsigned_Mem_WB),
         .RegWrite_out(RegWrite_Mem_WB),
-        .SLType_out(SLType_Mem_WB),
         .MemtoReg_out(MemtoReg_Mem_WB),
         .Rd_addr_out(Rd_addr_Mem_WB),
         .UI_out(UI_Mem_WB),
@@ -441,8 +421,6 @@ module PCPU (
     );
 
     WB Write_Back (
-        .Unsigned(Unsigned_Mem_WB),
-        .SLType(SLType_Mem_WB),
         .MemtoReg(MemtoReg_Mem_WB),
         .UI(UI_Mem_WB),
         .PCP4(PCP4_Mem_WB),

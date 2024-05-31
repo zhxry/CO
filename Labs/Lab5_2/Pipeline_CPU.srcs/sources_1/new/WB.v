@@ -21,8 +21,8 @@
 
 
 module WB (
-    input Unsigned,
-    input [1:0] SLType,
+    // input Unsigned,
+    // input [1:0] SLType,
     input [1:0] MemtoReg,
     input [31:0] UI,
     input [31:0] PCP4,
@@ -31,19 +31,19 @@ module WB (
     output [31:0] Data_out
 );
 
-    wire [31:0] Data_to_MUX;
+    // wire [31:0] Data_to_MUX;
 
-    DataProcess DP (
-        .Unsigned(Unsigned),
-        .Addr(ALU_in[1:0]),
-        .SLType(SLType),
-        .Data_in(Data_in),
-        .DataTMUX(Data_to_MUX)
-    );
+    // DataProcess DP (
+    //     .Unsigned(Unsigned),
+    //     .Addr(ALU_in[1:0]),
+    //     .SLType(SLType),
+    //     .Data_in(Data_in),
+    //     .DataTMUX(Data_to_MUX)
+    // );
 
     MUX4T1_32 M4_1 (
         .I0(ALU_in),
-        .I1(Data_to_MUX),
+        .I1(Data_in),
         .I2(PCP4),
         .I3(UI),
         .S(MemtoReg),

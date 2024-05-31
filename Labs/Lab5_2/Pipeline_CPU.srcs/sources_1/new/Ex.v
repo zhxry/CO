@@ -31,7 +31,6 @@ module Ex (
     output [31:0] UI_out,
     output [31:0] ALU_out,
     output [31:0] PCP4_out
-    // output [31:0] PCPI_out
 );
 
     wire [31:0] PCPI;

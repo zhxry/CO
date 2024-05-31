@@ -35,7 +35,7 @@ module ForwardingUnit (
     // 100: PCP4_Ex_Mem, 101: PCP4_Mem_WB, 110: Imm_Ex_Mem, 111: Imm_Mem_WB
     output reg [2:0] Forward_rs1,
     output reg [2:0] Forward_rs2,
-    // 00: 
+    // 00: Rs2_out, 01: ALU_res, 10: Data_to_Reg(WB), 11: lui/auipc
     output reg [1:0] Forward_to_Mem
 );
 
@@ -77,8 +77,10 @@ module ForwardingUnit (
             end else Forward_rs2 = 3'b000;
         end
 
-        if (RegWrite_Ex_Mem && Rd_Ex_Mem != 0 && Rs2_ID_Ex == Rd_Ex_Mem) Forward_to_Mem = 2'b01;
-        else if (RegWrite_Mem_WB && Rd_Mem_WB != 0 && Rs2_ID_Ex == Rd_Mem_WB) Forward_to_Mem = 2'b10;
+        if (RegWrite_Ex_Mem && Rd_Ex_Mem != 0 && Rs2_ID_Ex == Rd_Ex_Mem) begin
+            if (MemtoReg_Ex_Mem == 2'b11) Forward_to_Mem = 2'b11; // lui/auipc
+            else Forward_to_Mem = 2'b01; // ALU_res
+        end else if (RegWrite_Mem_WB && Rd_Mem_WB != 0 && Rs2_ID_Ex == Rd_Mem_WB) Forward_to_Mem = 2'b10;
         else Forward_to_Mem = 2'b00;
 
     end
