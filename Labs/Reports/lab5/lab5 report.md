@@ -56,7 +56,9 @@ add     x3, x3, x3         # x3 = 0x00000020
 sw      x3, 0(x0)          # mem[0] = 0x00000020
 lw      x4, 0(x0)          # x4 = 0x00000020
 addi    x5, x4, 4          # x5 = 0x00000024
-addi    x6, x4, 5          # x6 = 0x00000025
+addi    x6, x0, 5          # x6 = 0x00000005
+sb      x6, 2(x0)          # mem[0] = 0x00050020
+lw      x6, 0(x0)          # x6 = 0x00050020
 
 lui     x1, 0xAAAAA        # x1 = 0xAAAAA000
 addi    x2, x1, 2          # x2 = 0xAAAAA002

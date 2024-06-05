@@ -35,7 +35,8 @@ module Reg_IF_ID (
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             PC_out <= 32'b0;
-            inst_out <= 32'b0;
+            inst_out <= 32'h00000013;
+            // inst_out <= 32'b0;
         end else if (en) begin
             if (stall) begin
                 PC_out <= PC_out;

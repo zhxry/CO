@@ -54,7 +54,7 @@ module CSSTE(
     wire [31:0] spo;
     wire [31:0] douta;
     wire [31:0] clkdiv;
-    wire [31:0] PC_out;
+    wire [31:0] PC_out_IF;
     wire [31:0] Addr_out;
     wire [31:0] Data_out;
     wire [31:0] Disp_num;
@@ -95,6 +95,12 @@ module CSSTE(
     wire [31:0] t5;
     wire [31:0] t6;
 
+    wire [31:0] PC_IF_ID;
+    wire [31:0] inst_out_IF_ID;
+    wire [31:0] PC_ID_Ex;
+    wire MemRW_ID_Ex;
+    wire [31:0] Data_to_Reg_WB;
+
     PCPU U1 (
         .clk(Clk_CPU),
         .rst(rst),
@@ -103,7 +109,7 @@ module CSSTE(
         .MemRW_out(MemRW),
         .Addr_out(Addr_out),
         .Data_to_Mem(Data_out),
-        .PC_out_IF(PC_out),
+        .PC_out_IF(PC_out_IF),
         .x0(x0),
         .ra(ra),
         .sp(sp),
@@ -135,11 +141,16 @@ module CSSTE(
         .t3(t3),
         .t4(t4),
         .t5(t5),
-        .t6(t6)
+        .t6(t6),
+        .PC_IF_ID(PC_IF_ID),
+        .inst_out_IF_ID(inst_out_IF_ID),
+        .PC_ID_Ex(PC_ID_Ex),
+        .MemRW_ID_Ex(MemRW_ID_Ex),
+        .Data_to_Reg_WB(Data_to_Reg_WB)
     );
 
     ROM U2 (
-        .a(PC_out[11:2]),
+        .a(PC_out_IF[11:2]),
         .spo(spo)
     );
 
@@ -183,14 +194,14 @@ module CSSTE(
         .point_in({clkdiv, clkdiv}),
         .LES(64'b0),
         .Data0(Peripheral_in),
-        .data1({2'b0, PC_out[31:2]}),
+        .data1({2'b0, PC_out_IF[31:2]}),
         .data2(spo),
         .data3(counter_out),
         .data4(Addr_out),
         .data5(Data_out),
         .data6(douta),
         // .data6(Cpu_data4bus),
-        .data7(PC_out),
+        .data7(PC_out_IF),
         .point_out(point_out),
         .LE_out(LE_out),
         .Disp_num(Disp_num)
@@ -254,13 +265,58 @@ module CSSTE(
         .clk_25m(clkdiv[1]),
         .clk_100m(clk_100mhz),
         .rst(rst),
-        .pc(PC_out),
-        .inst(spo),
-        .alu_res(Addr_out),
-        .mem_wen(MemRW[3] | MemRW[2] | MemRW[1] | MemRW[0]),
-        .dmem_o_data(douta),
-        .dmem_i_data(ram_data_in),
-        .dmem_addr(Addr_out),
+        // .pc(PC_out_IF),
+        // .inst(spo),
+        // .alu_res(Addr_out),
+        // .mem_wen(MemRW[3] | MemRW[2] | MemRW[1] | MemRW[0]),
+        // .dmem_o_data(douta),
+        // .dmem_i_data(ram_data_in),
+        // .dmem_addr(Addr_out),
+
+        .IfId_valid(),
+        .IdEx_inst(),
+        .IdEx_valid(),
+        .IdEx_rd(),
+        .IdEx_rs1(),
+        .IdEx_rs2(),
+        .IdEx_rs1_val(),
+        .IdEx_rs2_val(),
+        .IdEx_reg_wen(),
+        .IdEx_is_imm(),
+        .IdEx_imm(),
+        .IdEx_mem_ren(),
+        .IdEx_is_branch(),
+        .IdEx_is_jal(),
+        .IdEx_is_jalr(),
+        .IdEx_is_auipc(),
+        .IdEx_is_lui(),
+        .IdEx_alu_ctrl(),
+        .IdEx_cmp_ctrl(),
+        .ExMa_pc(),
+        .ExMa_inst(),
+        .ExMa_valid(),
+        .ExMa_rd(),
+        .ExMa_reg_wen(),
+        .ExMa_mem_ren(),
+        .ExMa_is_jal(),
+        .ExMa_is_jalr(),
+        .MaWb_pc(),
+        .MaWb_inst(),
+        .MaWb_valid(),
+        .MaWb_rd(),
+        .MaWb_reg_wen(),
+
+        .PC_IF(PC_out_IF),
+        .inst_IF(spo),
+        .PC_ID(PC_IF_ID),
+        .inst_ID(inst_out_IF_ID),
+        .PC_Ex(PC_ID_Ex),
+        .MemRW_Ex(MemRW_ID_Ex),
+        .MemRW_Mem(MemRW[3] | MemRW[2] | MemRW[1] | MemRW[0]),
+        .Data_out(douta),
+        .Addr_out(Addr_out),
+        .Data_out_WB(Data_to_Reg_WB),
+
         .hs(HSYNC),
         .vs(VSYNC),
         .vga_r(Red),

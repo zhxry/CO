@@ -60,11 +60,17 @@ module PCPU (
     output [31:0] t3,
     output [31:0] t4,
     output [31:0] t5,
-    output [31:0] t6
+    output [31:0] t6,
+
+    output [31:0] PC_IF_ID,
+    output [31:0] inst_out_IF_ID,
+    output [31:0] PC_ID_Ex,
+    output [31:0] MemRW_ID_Ex,
+    output [31:0] Data_to_Reg_WB
 );
 
-    wire [31:0] PC_IF_ID;
-    wire [31:0] inst_out_IF_ID;
+    // wire [31:0] PC_IF_ID;
+    // wire [31:0] inst_out_IF_ID;
 
     wire UT_ID;
     wire MemRW_ID;
@@ -82,14 +88,14 @@ module PCPU (
     wire [31:0] Imm_out_ID;
 
     wire [4:0] Rd_addr_ID_Ex;
-    wire [31:0] PC_ID_Ex;
+    // wire [31:0] PC_ID_Ex;
     wire [31:0] Rs1_out_ID_Ex;
     wire [31:0] Rs2_out_ID_Ex;
     wire [31:0] Imm_out_ID_Ex;
     wire [4:0] Rs1_addr_ID_Ex;
     wire [4:0] Rs2_addr_ID_Ex;
     wire UT_ID_Ex;
-    wire MemRW_ID_Ex;
+    // wire MemRW_ID_Ex;
     wire ALUSrc_B_ID_Ex;
     wire Unsigned_ID_Ex;
     wire RegWrite_ID_Ex;
@@ -123,7 +129,7 @@ module PCPU (
     wire [31:0] Dmem_data_Mem_WB;
     wire [31:0] PCP4_Mem_WB;
 
-    wire [31:0] Data_to_Reg_WB;
+    // wire [31:0] Data_to_Reg_WB;
 
     wire [2:0] Forward_rs1, Forward_rs2;
     wire [1:0] Forward_to_Mem;
