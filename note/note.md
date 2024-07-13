@@ -38,7 +38,7 @@
 #### Add & Sub
 
 - 用补码实现减法
-    ![](img/sub.png)
+    <center><img src = "img/sub.png" width = 50%></center>
 
 #### Signed & Unsigned Number
 
@@ -48,7 +48,7 @@
     - 1's Complement: $(1001)_2 = (-6)_{10}$
     - 2's Complement: $(1001)_2 = (-7)_{10}$
 - Biased Notation: $[X]_b=  2^n + X$
-    ![](img/biased.png)
+    <center><img src = "img/biased.png" width = 50%></center>
     加上 $2^{31}$（相当于最高位翻转）让右侧数值递增
 - Sign Extension：假设要将 8 位有符号数 $(1111\ 0101)_2 = (-11)_{10}$ 扩展为 16 位，则将最高位（此处为 1）复制即可，得到 $1111\ 1111\ 1111\ 0101$
 
@@ -117,7 +117,7 @@
     - 对于每一组，分别假设进位值为 0, 1 后计算两种可能的加法结果和进位值
     - 第一组取进位值为 0 的结果，第二组根据第一组的实际进位选择结果，然后组合两组结果
 - Demo
-    ![](img/CSA.png)
+    <center><img src = "img/CSA.png" width = 50%></center>
 
 ### Multiplication
 
@@ -128,7 +128,7 @@
 - 以 64 位乘法为例，先初始化 128 位乘积寄存器为 0，并将 128 位被乘数寄存器初始化为左半部分 0 及右 64 位被乘数
 - **被乘数**寄存器每执行一步便左移一位，根据**乘数**最低位判断是否将被乘数与 128 位乘积寄存器中间结果累加，然后乘数寄存器右移
 - Diagram
-    ![](img/mulv1.png)
+    <center><img src = "img/mulv1.png" width = 50%></center>
 
 ##### Version 2
 
@@ -136,9 +136,9 @@
 - 不移动被乘数寄存器，而是移动乘积寄存器
 - 将乘数放到乘积寄存器**右半部分**（不再需要乘数寄存器），根据其最低位决定是否将被乘数累加到乘积寄存器的**左半部分**，然后整体右移
 - Diagram
-    ![](img/mulv2.png)
+    <center><img src = "img/mulv2.png" width = 50%></center>
 - Demo
-    ![](img/mulv2demo.png)
+    <center><img src = "img/mulv2demo.png" width = 50%></center>
 
 #### Signed Multiplication
 
@@ -161,12 +161,12 @@
         - `00` 或 `11`：不执行操作
     - 将乘积寄存器连同 Booth 位同时**算数右移**
 - Demo
-    ![](img/boothdemo.png)
+    <center><img src = "img/boothdemo.png" width = 50%></center>
 
 #### Faster Multiplication
 
 使用并行运算，可以将 64 位乘法等待时间从 64 次缩减到 6 次
-![](img/fastermul.png)
+<center><img src = "img/fastermul.png" width = 50%></center>
 
 #### RISC-V Multiplication
 
@@ -189,7 +189,7 @@ RISC-V 指令集提供了四种乘法指令（以 64 位为例）：
     - 结果为负数：商中生成一位 0，将除数寄存器加回余数寄存器
 - 右移除数寄存器
 - Diagram
-    ![](img/divv1.png)
+    <center><img src = "img/divv1.png" width = 50%></center>
 
 ##### Version 2
 
@@ -200,9 +200,9 @@ RISC-V 指令集提供了四种乘法指令（以 64 位为例）：
 - 整体左移
 - 最终低半部分为商，高半部分**右移一位**得到余数（因此余数寄存器应为 129 位防止进位丢失）
 - Diagram
-    ![](img/divv2.png)
+    <center><img src = "img/divv2.png" width = 50%></center>
 - Demo: $7 \div 2$
-    ![](img/divdemo.png)
+    <center><img src = "img/divdemo.png" width = 50%></center>
 
 #### Signed Division
 
@@ -240,7 +240,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     |`float`|1|8|23|
     |`double`|1|11|52|
 - Demo - Represent $0.75$
-    ![](img/floatingdemo.png)
+    <center><img src = "img/floatingdemo.png" width = 50%></center>
 
 ##### Range
 
@@ -270,7 +270,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 
 ##### Summary
 
-![](img/IEEE754Sum.png)
+<center><img src = "img/IEEE754Sum.png" width = 50%></center>
 
 #### Floating Point Add & Sub
 
@@ -280,11 +280,11 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     3. 规格化（Normalization）：若结果超过尾数表示范围，则将结果右移、阶码加 1；若过小则右移
     4. 舍入溢出（Rounding）
 - Demo - Addition
-    ![](img/floatadddemo.png)
+    <center><img src = "img/floatadddemo.png" width = 50%></center>
 - Demo - Subtraction
-    ![](img/floatsubdemo.png)
+    <center><img src = "img/floatsubdemo.png" width = 50%></center>
 - Hardware
-    ![](img/floataddhardware.png)
+    <center><img src = "img/floataddhardware.png" width = 50%></center>
 
 #### Floating Point Mul & Div
 
@@ -294,15 +294,15 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     3. 规格化
     4. 舍入溢出
 - Demo1 - Mul
-    ![](img/floatmuldemo.png)
+    <center><img src = "img/floatmuldemo.png" width = 50%></center>
 - Demo2 - Mul
-    ![](img/floatmuldemo2.png)
+    <center><img src = "img/floatmuldemo2.png" width = 50%></center>
 
 #### RISC-V
 
 ##### Instructions
 
-![](img/floatRISC-V.png)
+<center><img src = "img/floatRISC-V.png" width = 50%></center>
 
 ##### Demo - Array Multiplication
 
@@ -318,8 +318,8 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     ```
     Addresses of `c, a, b` in `x10, x11, x12`, and `i, j, k` in `x5, x6, x7`
 - RISC-V Code
-    ![](img/mmcode1.png)
-    ![](img/mmcode2.png)
+    <center><img src = "img/mmcode1.png" width = 50%></center>
+    <center><img src = "img/mmcode2.png" width = 50%></center>
 
 
 #### Accurate Arithmatic
@@ -331,7 +331,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 - IEEE 754 在中间计算时，总是在右边保留两个额外的位：**保护位**（guard）和**舍入位**（round）
 - 后两位在 $0 \sim 49$ 之间时舍去，$51 \sim 99$ 之间进位
 - Demo
-    ![](img/roundguarddemo.png)
+    <center><img src = "img/roundguarddemo.png" width = 50%></center>
 
 ##### Sticky
 
@@ -342,7 +342,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 
 ## Chapter 2: Instructions: Language of the Computer
 
-### RISC-V Assenmly Language
+### RISC-V Assembly Language
 
 #### Arithmetic
 
@@ -381,7 +381,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 
 - 存储器只能被数据传输指令访问，保存数据结构、数组和换出的寄存器的内容。
 - 使用字节寻址法（双字的地址与双字内 8 个字节之一的地址匹配），共 $2^{64} / 2^3 = 2^{61}$ 个（`memory[0], memory[8], ..., memory[2^64 - 8]`）
-    ![](img/addressed.png)
+    <center><img src = "img/addressed.png" width = 50%></center>
 - Endianness
     - Big endian
         - 数据的高字节存放在低地址
@@ -392,7 +392,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
         - 数据的低字节存放在低地址
         - RISC-V
 - Memory Alignment
-    ![](img/memoryAlignment.png)
+    <center><img src = "img/memoryAlignment.png" width = 50%></center>
 - Demo
     - C
         ```C
@@ -464,7 +464,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 - 主要用于无条件跳转
 - `imm` 用于指定跳转偏移量，`rd` 用于存储跳转返回地址
 
-![](img/instructions.png)
+<center><img src = "img/instructions.png" width = 50%></center>
 
 ### Instructions
 
@@ -475,9 +475,9 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 - `blt rs1, rs2, offset`：`rs1 < rs2` 则跳转（默认比较**有符号**，无符号需用 `bltu`）
 - `bge rs1, rs2, offset`：`rs1 >= rs2` 则跳转
 - Demo-case
-    ![](img/beq_bne.png)
+    <center><img src = "img/beq_bne.png" width = 50%></center>
 - Demo-loop
-    ![](img/whileLoop.png)
+    <center><img src = "img/whileLoop.png" width = 50%></center>
 
 简便方法
 - 如果 `x20 >= x11 || x20 < 0` 则跳转 `IndexOutOfBounds`：`bgeu x20, x11, IndexOutOfBounds`
@@ -486,7 +486,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 
 - `slt rsd, rs1, rs2`：如果 `rs1` 的值小于 `rs2`，则将 `rd` 的值设置为 1，否则置为 0。比较有符号。
 - 类似还有 `sltu`, `slti`, `sltiu` 等。
-    ![](img/slt.png)
+    <center><img src = "img/slt.png" width = 50%></center>
 
 #### Jump Address Table
 
@@ -506,7 +506,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     }
     ```
 - RISC-V Instructions（`x6` 为表的基地址）
-    ![](img/jalr.png)
+    <center><img src = "img/jalr.png" width = 50%></center>
 
 ### Procedures
 
@@ -531,25 +531,22 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 - 用另外一个变量存储长度
 - 字符串末尾以 `0` 表示结束
 
-<!-- Demo: `strcpy()`
-    ![](img/stringDemo.png) -->
-
 ### Wide Immediate Addressing
 
 - `lui rd, imm`：将 20 位常数存储到寄存器 `rd[31:12]` 并将 `rd[31]` 扩展到 `rd[63:32]` 中，再将 `rd[11:0]` 置 0（U-Type）
 - Demo：存储 32 位，先用 `lui` 再用 `addi` 存低 12 位
-    ![](img/wideimme.png)
+    <center><img src = "img/wideimme.png" width = 50%></center>
 
 #### Branch Addressing
 
 - SB-Type (Store Byte)：分支跳转指令，范围 $-4096 \sim 4096$
 - 是 PC-relative 寻址，Target Address = PC + Branch offset
-    ![](img/SB-Type.png)
+    <center><img src = "img/SB-Type.png" width = 50%></center>
 
 #### Jump Addressing
 
 - UJ-Type：无条件跳转，范围 $-2^{20} \sim 2^{20}$
-    ![](img/UJ-Type.png)
+    <center><img src = "img/UJ-Type.png" width = 50%></center>
 - 长距离跳转
     - `beq x10, x0, L1`
     - 以下写法实现长距离跳转
@@ -559,16 +556,34 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
         L2:
         ```
 - Demo
-    ![](img/addressingDemo.png)
+    <center><img src = "img/addressingDemo.png" width = 50%></center>
 
 #### Summary
 
 - Addressing 一条指令中可能涉及多种寻址方式
-    ![](img/addressingSummary.png)
+    <center><img src = "img/addressingSummary.png" width = 50%></center>
 - RISC-V Encoding
-    ![](img/RISC-VEncoding.png)
+    <center><img src = "img/RISC-VEncoding.png" width = 50%></center>
 - Instruction Format
-    ![](img/instFormat.png)
+    <center><img src = "img/instFormat.png" width = 50%></center>
+```asm
+# gcd(x, y) = y == 0 ? x : gcd(y, x % y)
+# x in x10, y in x11, gcd in x10
+gcd:
+    addi sp, sp, -12
+    sw x1, 0(sp)
+    sw x10, 4(sp)
+    sw x11, 8(sp)
+
+    bne x11, x0, L1 # x10 为 gcd
+    jalr x0, 0(x1)
+
+L1:
+    rem x5, x10, x11 # x5 = x % y
+    addi x10, x11, 0
+    addi x11, x5, 0
+    jal x1, gcd
+```
 
 ### Synchronization
 
@@ -578,14 +593,14 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     - `lr.d`（Load Reserved Doubleword）：原子加载指令，读取双字的值并将其标记为 _reserved_
     - `sc.d`（Store Conditional Doubleword）：尝试将双字的值写入内存，仅在该地址从上次 `ld.r` 执行以来一直处于 _reserved_ 时成功
     - Demo: atomic swap
-        ![](img/atomicSwap.png)
+        <center><img src = "img/atomicSwap.png" width = 50%></center>
 
 ### Array vs Pointer
 
 - 指针写法不需要在循环中计算地址，稍快
 - 但是编译器会优化数组写法
 
-![](img/arrayVsPointer.png)
+<center><img src = "img/arrayVsPointer.png" width = 50%></center>
 
 ## Chapter 4: The Processor (Single Cycle)
 
@@ -593,15 +608,15 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 
 #### DataPath
 
-![](img/dataPath.png)
+<center><img src = "img/dataPath.png" width = 50%></center>
 
-![](img/dataPathConstruction.png)
+<center><img src = "img/dataPathConstruction.png" width = 50%></center>
 
 #### Control Unit
 
-![](img/overviewWithControl.png)
+<center><img src = "img/overviewWithControl.png" width = 50%></center>
 
-![](img/controllerScheme.png)
+<center><img src = "img/controllerScheme.png" width = 50%></center>
 
 根据输入指令 `inst[31:0]` 产生控制信号
 - `RegWrite`：是否向寄存器写入数据
@@ -615,20 +630,31 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     - ALU：如 `add` 等算数/逻辑指令
     - PC Adder：如 `jal` 等跳转指令
 
+
+| Inst | ALUSB | Mem2Reg | RegWr | MemRW | Branch | Jump | ALUOp |
+| ---- | ----- | ------- | ----- | ----- | ------ | ---- | ----- |
+| R    | 0     | 0       | 1     | 00    | 0      | 00   | TBD   |
+| l    | 1     | 0       | 1     | 00    | 0      | 00   | RBD   |
+| ld   | 1     | 1       | 1     | 01    | 0      | 00   | +     |
+| S    | 1     | x       | 0     | 10    | 0      | 00   | +     |
+| B    | 0     | x       | 0     | 00    | 1      | 00   | cmp   |
+| J    | x     | 10      | 1     | 00    | 0      | 01   | x     |
+| jalr | 1     | 10      | 1     | 00    | 0      | 10   | +     |
+| lui  | x     | 11      | 1     | 00    | 0      | 00   | x     |
+
 #### Others
 
 - ALU：内存地址、分支比较控制、计算算术结果
     - 读取数据/存储数据：加法（内存地址）
     - 分支比较：减法（zero 信号）
     - R-type：取决于 opCode
-    ![]()
 - ImmGen：根据输入指令产生立即数、将立即数符号扩展为 32/64 位有符号数
 - Memory：内存，根据 `MemRead`, `MemWrite` 分别判断是否读取/存储数据
 - RegisterFile：寄存器堆，支持同时读取两个寄存器的数据、向一个寄存器写入数据
 
 #### Performance
 
-![](img/singleCyclePerformance.png)
+<center><img src = "img/singleCyclePerformance.png" width = 50%></center>
 
 ### Exception
 
@@ -655,7 +681,7 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
     - `mtvec[63:2]`：中断处理程序入口地址
 - `mepc`：中断处理程序的返回地址
 - `mcause`：中断原因
-    ![](img/mcause.png)
+    <center><img src = "img/mcause.png" width = 50%></center>
 
 #### Interrupt Instruction
 
@@ -674,12 +700,12 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 - EX（Execute）：执行
 - MEM（Memory）：访存
 - WB（Write Back）：写回
-    ![](img/pipelineStage.png)
+    <center><img src = "img/pipelineStage.png" width = 50%></center>
 
 #### Pipelining Performance
 
 - Comparison
-    ![](img/pipelinePerformance.png)
+    <center><img src = "img/pipelinePerformance.png" width = 50%></center>
 - Speedup: $Time between inst_{pipelined} = \frac{Time between inst_{not pipelined}}{Number of stages}$
 
 ### RISC-V Pipelined Datapath
@@ -687,10 +713,10 @@ RISC-V 指令集提供了两种除法指令（以 64 位为例）：
 #### Datapath
 
 - 前一个 rd 需要通过流水线寄存器传递，防止 `ld` 等指令写回时写到下一个 rd 中
-![](img/pipelineDatapath.png)
+<center><img src = "img/pipelineDatapath.png" width = 50%></center>
 
 #### Pipeline Instruction Execution
-![](img/pipelineInstExe.png)
+<center><img src = "img/pipelineInstExe.png" width = 50%></center>
 
 #### Pipeline Registers
 
@@ -717,14 +743,14 @@ Hazard Type
 - stall：暂停流水线，等待资源可用（可以解决任何 Hazard）
     - 可能导致 bubble（空指令周期）
 - Demo1: 分离指令内存和数据内存
-    ![](img/structuralHazard1.png)
+    <center><img src = "img/structuralHazard1.png" width = 50%></center>
 
 #### Data Hazard
 
 - stall：暂停流水线，等待数据可用（硬件检测并阻塞）
 - nop：插入空指令，与 stall 相似（编译时插入）
 - Forwarding：将 DataPath 生成的中间数据直接往前传递到 ALU 输入端参与后面指令的运算
-    ![](img/forwarding.png)
+    <center><img src = "img/forwarding.png" width = 50%></center>
 
 #### Control Hazard
 
@@ -749,7 +775,9 @@ Hazard Type
 - 检测需要 stall 的情况
 - 向流水线插入 bubble（空指令周期）
 2. Add stall control logic
-    ![](img/stallControlLogic.png)
+    <center><img src = "img/stallControlLogic.png" width = 50%></center>
+3. 最终的 Datapath
+    <center><img src = "img/pipeline.png" width = 50%></center>
 
 ##### Performance with Stall
 
@@ -775,15 +803,17 @@ $Speedup = \frac{pipeline\ depth}{1 + stall\ clk\ cycles\ per\ inst} $
     - Tag：用于识别存储在特定 Cache 槽中的数据属于哪个内存块，确定是否命中
     - Index：用于确定该内存块映射到 Cache 中的哪个槽
     - Offset：用于从 Cache 块中找到具体的数据字节
-    ![](img/directMappedCache.png)
+    <center><img src = "img/directMappedCache.png" width = 50%></center>
 - 读取规则
     - 利用内存地址的 Index 直接定位 Cache 中的位置。因此所有内存地址被分组，同组内的地址映射到同一个 Cache 槽中
     - Hit：如果 Tag 匹配且有效位有效，则命中，数据可以直接被使用
     - Miss：如果 Tag 不匹配或者有效位无效，则未命中，需要从内存中读取数据或进行替换
-    ![](img/addressSubdivision.png)
+    <center><img src = "img/addressSubdivision.png" width = 50%></center>
 - Demo
-    ![](img/accessSeq1.png)
-    ![](img/accessSeq2.png)
+    <center><img src = "img/accessSeq1.png" width = 50%></center>
+    <center><img src = "img/accessSeq2.png" width = 50%></center>
+- 大小计算：一般 Cache 以其包含数据量命名（如 4KiB Cache 可以容纳 4KiB 数据），但是还包含 tag, valid bit 等。其中 tag 位宽 = 地址位宽 - index（块数决定） - block offset（）
+    <center><img src = "img/bitsInCache.png" width = 50%></center>
 
 #### Handling Cache Hits & Misses
 
@@ -802,4 +832,41 @@ $Speedup = \frac{pipeline\ depth}{1 + stall\ clk\ cycles\ per\ inst} $
         - 先将缺失的数据从主内存加载到 Cache
         - 再执行写命中的策略
     - No Write Allocate：直接写入主内存，不写入 Cache
-    ![](img/cacheHitMissDemo.png)
+    <center><img src = "img/cacheHitMissDemo.png" width = 50%></center>
+- CPI 计算
+    <center><img src = "img/cacheCPI.png" width = 50%></center>
+
+### Virtual Memory
+
+- Virtual Memory：将主存看作是一个存储在磁盘上的地址空间的高速缓存
+
+#### 工作原理
+
+- 将虚拟内存分为固定大小的块，称为页（page），对应虚拟地址；将物理内存分为固定大小的块，称为页框（page frame），对应物理地址
+- 通过页表（page table）将虚拟地址映射到物理地址。程序访问内存时，操作系统查找页表，找到对应的页框进行访问
+- Replacement：当所有页都被使用时，如果程序需要更多内存，操作系统会选择一个页，将其写回磁盘，再将新的页加载到内存
+- Page fault：当程序访问的页不在主存中时，产生一个 page fault，操作系统将该页从磁盘加载到主存；如果主存已满，则选择一个页进行替换，同时更改页表的状态位
+    <center><img src = "img/virtualMapping.png" width = 50%></center>
+
+#### Page Table
+
+Page table：存储虚拟地址到物理地址的映射信息
+- 虚拟内存使用全相联映射策略
+- Page table 位于内存中，以虚拟页号为索引，存储页表项（Page table entry，PTE）表示映射信息，每个 PTE 包含物理页号和一些状态位
+    <center><img src = "img/pageTable.png" width = 50%></center>
+- 虚拟页号一般比物理页号多（因为部分物理地址在磁盘中）
+- 大小计算：
+    - 页数 = 地址空间大小 / 页大小（一个虚拟地址由虚拟页号 + 页内偏移组成）
+    - 页表大小 = 页数 * 页表项大小
+        <center><img src = "img/pageTableSize.png" width = 50%></center>
+
+#### TLB: Translation Lookaside Buffer
+
+- TLB：用于加速虚拟地址到物理地址的转换；位于 CPU 中，存储最近使用的 PTE，可以视为页表的小但快速的缓存
+    <center><img src = "img/TLB.png" width = 50%></center>
+- 工作原理：当 CPU 尝试访问一个虚拟地址时，会首先查找 TLB
+    - 如果找到对应的 PTE（hit），则直接将虚拟地址转换为物理地址
+    - 如果未找到（miss），则访问主内存的 page table 查找对应 PTE，并加载到 TLB 中，然后将虚拟地址转换为物理地址
+        <center><img src = "img/TLBRead.png" width = 50%></center>
+
+[复习](https://blog.csdn.net/weixin_44176696/article/details/112536115)

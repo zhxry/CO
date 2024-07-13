@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1718104512">
+  <File Type="PA-TCL" Name="CSSTE.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CSSTE_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="CSSTE_reports.tcl"/>
+  <File Type="RDS-RDS" Name="CSSTE.vds"/>
+  <File Type="RDS-UTIL" Name="CSSTE_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="CSSTE_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="CSSTE.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CSSTE_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CSSTE_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/IP/Counter_x.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/SAnti_jitter.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/clk_div.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/SPIO.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/Seg7_Dev_0/Seg7_Dev_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/Multi_8CH32.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/MIO_BUS.edf">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.edf"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ROM/ROM.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/ALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/new/ALU.v"/>
+        <Attr Name="ImportTime" Val="1713508748"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/Counter_x.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/Counter_x.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/DataProcess.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/new/DataProcess.v"/>
+        <Attr Name="ImportTime" Val="1713600697"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Ex.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ForwardingUnit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ID.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/IF.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/ImmGen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/new/ImmGen.v"/>
+        <Attr Name="ImportTime" Val="1713511778"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/MIO_BUS.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/MIO_BUS.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX2T1_32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX4T1_32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX8T1_32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Mem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MemRWProcess.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/new/MemRWProcess.v"/>
+        <Attr Name="ImportTime" Val="1713600795"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/Multi_8CH32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/Multi_8CH32.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PCPU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/REG32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Reg_Ex_Mem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Reg_ID_Ex.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Reg_IF_ID.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Reg_Mem_WB.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Regs.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/new/Regs.v"/>
+        <Attr Name="ImportTime" Val="1712250730"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/SAnti_jitter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/SAnti_jitter.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/SCPU_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/new/SCPU_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1713600732"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/SPIO.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/SPIO.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/StallUnit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Framework/VGA.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab5-attachment/VGA_pipeline/VGA.srcs/sources_1/imports/Framework/VGA.v"/>
+        <Attr Name="ImportTime" Val="1717556374"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Framework/VgaController.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab5-attachment/VGA_pipeline/VGA.srcs/sources_1/imports/Framework/VgaController.v"/>
+        <Attr Name="ImportTime" Val="1717555096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Framework/VgaDebugger.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab5-attachment/VGA_pipeline/VGA.srcs/sources_1/imports/Framework/VgaDebugger.v"/>
+        <Attr Name="ImportTime" Val="1717555096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Framework/VgaDisplay.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab5-attachment/VGA_pipeline/VGA.srcs/sources_1/imports/Framework/VgaDisplay.v"/>
+        <Attr Name="ImportTime" Val="1717555651"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/WB.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/add_32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/new/add_32.v"/>
+        <Attr Name="ImportTime" Val="1711805062"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IP/clk_div.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/sources_1/imports/IP/clk_div.v"/>
+        <Attr Name="ImportTime" Val="1710222785"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CSSTE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/testbench.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab5-attachment/I_mem.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab5-attachment/I_mem_5_2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="CSSTE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/OExp02-IP2SOC/A7.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab4_3_finished/OExp02-IP2SOC.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc"/>
+        <Attr Name="ImportTime" Val="1713938641"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
+</GenRun>

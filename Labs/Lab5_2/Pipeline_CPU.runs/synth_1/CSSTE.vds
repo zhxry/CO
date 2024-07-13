@@ -1,0 +1,520 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun 11 19:15:19 2024
+# Process ID: 43480
+# Current directory: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1
+# Command line: vivado.exe -log CSSTE.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CSSTE.tcl
+# Log file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/CSSTE.vds
+# Journal file: D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CSSTE.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab2-attachment/OExp02-IP2SOC/IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5-attachment/VGA_pipeline/VGA.srcs/sources_1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top CSSTE -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34328
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1010.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CSSTE' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PCPU' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IF' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'REG32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/REG32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'REG32' (1#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/REG32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IF' (2#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_IF_ID' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_IF_ID.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_IF_ID' (3#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_IF_ID.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ID' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ID.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/Regs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (4#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/Regs.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ImmGen.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ImmGen.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (5#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ImmGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SCPU_ctrl' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:67]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:54]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:87]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:103]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'SCPU_ctrl' (6#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:23]
+WARNING: [Synth 8-7071] port 'MIO_ready' of module 'SCPU_ctrl' is unconnected for instance 'SCPU_ctrl' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ID.v:132]
+WARNING: [Synth 8-7071] port 'CPU_MIO' of module 'SCPU_ctrl' is unconnected for instance 'SCPU_ctrl' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ID.v:132]
+WARNING: [Synth 8-7023] instance 'SCPU_ctrl' of module 'SCPU_ctrl' has 16 connections declared, but only 14 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ID.v:132]
+INFO: [Synth 8-6155] done synthesizing module 'ID' (7#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ID.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX4T1_32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX4T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (8#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX4T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_ID_Ex' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_ID_Ex.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_ID_Ex' (9#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_ID_Ex.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'MemRW_out' does not match port width (1) of module 'Reg_ID_Ex' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:270]
+INFO: [Synth 8-6157] synthesizing module 'StallUnit' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/StallUnit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'StallUnit' (10#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/StallUnit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ForwardingUnit.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (11#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/ForwardingUnit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX8T1_32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX8T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX8T1_32' (12#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX8T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Ex' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'add_32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/add_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'add_32' (13#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/add_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX2T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (14#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/MUX2T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ALU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (15#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ALU.v:23]
+WARNING: [Synth 8-7071] port 'zero' of module 'ALU' is unconnected for instance 'ALU' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Ex.v:65]
+WARNING: [Synth 8-7023] instance 'ALU' of module 'ALU' has 5 connections declared, but only 4 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Ex.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'Ex' (16#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MemRWProcess' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/MemRWProcess.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/MemRWProcess.v:48]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/MemRWProcess.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'MemRWProcess' (17#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/MemRWProcess.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'MemRW_in' does not match port width (1) of module 'MemRWProcess' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:348]
+WARNING: [Synth 8-7071] port 'MemRW_out' of module 'MemRWProcess' is unconnected for instance 'MP_Ex' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:347]
+WARNING: [Synth 8-7023] instance 'MP_Ex' of module 'MemRWProcess' has 6 connections declared, but only 5 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:347]
+INFO: [Synth 8-6157] synthesizing module 'Reg_Ex_Mem' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_Ex_Mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_Ex_Mem' (18#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_Ex_Mem.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'MemRW_in' does not match port width (1) of module 'Reg_Ex_Mem' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:370]
+INFO: [Synth 8-6157] synthesizing module 'Mem' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DataProcess' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/DataProcess.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DataProcess' (19#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/DataProcess.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Mem' (20#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Reg_Mem_WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_Mem_WB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Reg_Mem_WB' (21#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/Reg_Mem_WB.v:23]
+WARNING: [Synth 8-7071] port 'Unsigned_in' of module 'Reg_Mem_WB' is unconnected for instance 'Register_Mem_WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:409]
+WARNING: [Synth 8-7071] port 'SLType_in' of module 'Reg_Mem_WB' is unconnected for instance 'Register_Mem_WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:409]
+WARNING: [Synth 8-7071] port 'Unsigned_out' of module 'Reg_Mem_WB' is unconnected for instance 'Register_Mem_WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:409]
+WARNING: [Synth 8-7071] port 'SLType_out' of module 'Reg_Mem_WB' is unconnected for instance 'Register_Mem_WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:409]
+WARNING: [Synth 8-7023] instance 'Register_Mem_WB' of module 'Reg_Mem_WB' has 21 connections declared, but only 17 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:409]
+INFO: [Synth 8-6157] synthesizing module 'WB' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/WB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'WB' (22#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/WB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PCPU' (23#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/PCPU.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'MemRW_ID_Ex' does not match port width (32) of module 'PCPU' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:148]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/.Xil/Vivado-43480-Karnage/realtime/ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (24#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/.Xil/Vivado-43480-Karnage/realtime/ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/.Xil/Vivado-43480-Karnage/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (25#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/.Xil/Vivado-43480-Karnage/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MIO_BUS' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/MIO_BUS.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Multi_8CH32' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Multi_8CH32.v:15]
+INFO: [Synth 8-6157] synthesizing module 'Seg7_Dev_0' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/synth/Seg7_Dev_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Seg7_Dev' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/Seg7_Dev.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dispsync' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/DisplaySync.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dispsync' (26#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/DisplaySync.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MC_14495' [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/MC_14495.v:23]
+INFO: [Synth 8-6157] synthesizing module 'INV' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36164]
+INFO: [Synth 8-6155] done synthesizing module 'INV' (27#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36164]
+INFO: [Synth 8-6157] synthesizing module 'AND4' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:570]
+INFO: [Synth 8-6155] done synthesizing module 'AND4' (28#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:570]
+INFO: [Synth 8-6157] synthesizing module 'OR4' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50116]
+INFO: [Synth 8-6155] done synthesizing module 'OR4' (29#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50116]
+INFO: [Synth 8-6157] synthesizing module 'AND3' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:522]
+INFO: [Synth 8-6155] done synthesizing module 'AND3' (30#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:522]
+INFO: [Synth 8-6157] synthesizing module 'OR3' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50068]
+INFO: [Synth 8-6155] done synthesizing module 'OR3' (31#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50068]
+INFO: [Synth 8-6157] synthesizing module 'AND2' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'AND2' (32#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:474]
+INFO: [Synth 8-6157] synthesizing module 'OR2' [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50022]
+INFO: [Synth 8-6155] done synthesizing module 'OR2' (33#1) [D:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50022]
+INFO: [Synth 8-6155] done synthesizing module 'MC_14495' (34#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/MC_14495.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Seg7_Dev' (35#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/Seg7_Dev.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Seg7_Dev_0' (36#1) [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/Seg7_Dev_0/synth/Seg7_Dev_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'SPIO' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SPIO.v:15]
+WARNING: [Synth 8-7071] port 'led_clk' of module 'SPIO' is unconnected for instance 'U7' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+WARNING: [Synth 8-7071] port 'led_sout' of module 'SPIO' is unconnected for instance 'U7' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+WARNING: [Synth 8-7071] port 'led_clrn' of module 'SPIO' is unconnected for instance 'U7' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+WARNING: [Synth 8-7071] port 'LED_PEN' of module 'SPIO' is unconnected for instance 'U7' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+WARNING: [Synth 8-7071] port 'GPIOf0' of module 'SPIO' is unconnected for instance 'U7' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+WARNING: [Synth 8-7023] instance 'U7' of module 'SPIO' has 12 connections declared, but only 7 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:219]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/clk_div.v:15]
+INFO: [Synth 8-6157] synthesizing module 'SAnti_jitter' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SAnti_jitter.v:15]
+WARNING: [Synth 8-7071] port 'readn' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7071] port 'Key_x' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7071] port 'Key_out' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7071] port 'Key_ready' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7071] port 'pulse_out' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7071] port 'CR' of module 'SAnti_jitter' is unconnected for instance 'U9' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+WARNING: [Synth 8-7023] instance 'U9' of module 'SAnti_jitter' has 13 connections declared, but only 7 given [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:239]
+INFO: [Synth 8-6157] synthesizing module 'Counter_x' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Counter_x.v:15]
+INFO: [Synth 8-6157] synthesizing module 'VGA' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VGA.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VgaController' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaController.v:1]
+	Parameter HS_1 bound to: 96 - type: integer 
+	Parameter VS_1 bound to: 2 - type: integer 
+	Parameter HS_2 bound to: 157 - type: integer 
+	Parameter VS_2 bound to: 57 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+	Parameter HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VgaController' (37#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaController.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VgaDisplay' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDisplay.v:1]
+INFO: [Synth 8-3876] $readmem data file 'D://Karnage//ZJU//Courses//23-24SpSu//CO//Labs//Lab5-attachment//VGA_pipeline//vga_debugger.mem' is read successfully [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDisplay.v:15]
+INFO: [Synth 8-3876] $readmem data file 'D://Karnage//ZJU//Courses//23-24SpSu//CO//Labs//Lab5-attachment//VGA_pipeline//font_8x16.mem' is read successfully [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDisplay.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'VgaDisplay' (38#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDisplay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VgaDebugger' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDebugger.v:31]
+INFO: [Synth 8-6157] synthesizing module 'Hex2Ascii' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDebugger.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Hex2Ascii' (39#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDebugger.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'VgaDebugger' (40#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VgaDebugger.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'VGA' (41#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/Framework/VGA.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CSSTE' (42#1) [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/new/CSSTE.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1010.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1010.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1010.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1010.379 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/ROM/ROM/ROM_in_context.xdc] for cell 'U2'
+Finished Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/ROM/ROM/ROM_in_context.xdc] for cell 'U2'
+Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/RAM/RAM/RAM_in_context.xdc] for cell 'U3'
+Finished Parsing XDC File [d:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.gen/sources_1/ip/RAM/RAM/RAM_in_context.xdc] for cell 'U3'
+Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]
+WARNING: [Vivado 12-507] No nets matched 'U1/Controller/Q[0]_i_13_n_1'. [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc:5]
+Finished Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/CSSTE_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/constrs_1/imports/OExp02-IP2SOC/A7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CSSTE_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CSSTE_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1068.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  INV => LUT1: 5 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1068.176 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1068.176 ; gain = 57.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1068.176 ; gain = 57.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U3. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 1068.176 ; gain = 57.797
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'Imm_out_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/ImmGen.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'MemRW_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'RegWrite_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUSrc_B_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'Unsigned_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'Jump_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'MemtoReg_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'SLType_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'ImmSel_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:88]
+WARNING: [Synth 8-327] inferring latch for variable 'ALU_Control_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:101]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUOp_reg' [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/new/SCPU_ctrl.v:55]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 1068.176 ; gain = 57.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 47    
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 19    
+	   3 Input   32 Bit        Muxes := 1     
+	  33 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	  14 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 2     
+	 416 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 12    
+	   9 Input    3 Bit        Muxes := 1     
+	  10 Input    2 Bit        Muxes := 5     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 35    
+	   6 Input    1 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 3     
+	  15 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 1     
+	  14 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	 416 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:12 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|VgaDisplay  | p_0_out    | 4096x8        | LUT            | 
+|CSSTE       | p_0_out    | 4096x8        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+----------------------------------+-----------+----------------------+------------------------------+
+|Module Name | RTL Object                       | Inference | Size (Depth x Width) | Primitives                   | 
++------------+----------------------------------+-----------+----------------------+------------------------------+
+|CSSTE       | U11/vga_display/display_data_reg | Implied   | 4 K x 7              | RAM64X1D x 128	RAM64M x 128	 | 
++------------+----------------------------------+-----------+----------------------+------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:01:21 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:22 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++------------+----------------------------------+-----------+----------------------+------------------------------+
+|Module Name | RTL Object                       | Inference | Size (Depth x Width) | Primitives                   | 
++------------+----------------------------------+-----------+----------------------+------------------------------+
+|CSSTE       | U11/vga_display/display_data_reg | Implied   | 4 K x 7              | RAM64X1D x 128	RAM64M x 128	 | 
++------------+----------------------------------+-----------+----------------------+------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:26 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U9 has unconnected pin readn
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ROM           |         1|
+|2     |RAM           |         1|
+|3     |MIO_BUS       |         1|
+|4     |Multi_8CH32   |         1|
+|5     |SPIO          |         1|
+|6     |clk_div       |         1|
+|7     |SAnti_jitter  |         1|
+|8     |Counter_x     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |Counter_x_bbox    |     1|
+|2     |MIO_BUS_bbox      |     1|
+|3     |Multi_8CH32_bbox  |     1|
+|4     |RAM               |     1|
+|5     |ROM               |     1|
+|6     |SAnti_jitter_bbox |     1|
+|7     |SPIO_bbox         |     1|
+|8     |clk_div_bbox      |     1|
+|9     |AND2              |     1|
+|10    |AND3              |    11|
+|11    |AND4              |     9|
+|12    |BUFG              |     2|
+|13    |CARRY4            |    89|
+|14    |INV               |     5|
+|15    |LUT1              |     8|
+|16    |LUT2              |   284|
+|17    |LUT3              |   248|
+|18    |LUT4              |   246|
+|19    |LUT5              |   404|
+|20    |LUT6              |  2477|
+|21    |MUXF7             |   599|
+|22    |MUXF8             |   120|
+|23    |OR2               |     7|
+|24    |OR3               |     3|
+|25    |OR4               |     4|
+|26    |RAM64M            |   128|
+|27    |RAM64X1D          |    64|
+|28    |FDCE              |  1519|
+|29    |FDPE              |     3|
+|30    |FDRE              |    48|
+|31    |FDSE              |     2|
+|32    |LD                |    51|
+|33    |IBUF              |    22|
+|34    |OBUF              |    46|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:28 . Memory (MB): peak = 1141.223 ; gain = 73.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1141.223 ; gain = 130.844
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/MIO_BUS.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/MIO_BUS.edf]
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Multi_8CH32.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Multi_8CH32.edf]
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SPIO.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SPIO.edf]
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/clk_div.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/clk_div.edf]
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SAnti_jitter.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/SAnti_jitter.edf]
+Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Counter_x.edf]
+Finished Parsing EDIF File [D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.srcs/sources_1/imports/IP/Counter_x.edf]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1150.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1189 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1151.012 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 283 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  INV => LUT1: 5 instances
+  LD => LDCE: 51 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 128 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+123 Infos, 42 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:48 . Memory (MB): peak = 1151.012 ; gain = 140.633
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Karnage/ZJU/Courses/23-24SpSu/CO/Labs/Lab5_2/Pipeline_CPU.runs/synth_1/CSSTE.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CSSTE_utilization_synth.rpt -pb CSSTE_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 11 19:17:20 2024...

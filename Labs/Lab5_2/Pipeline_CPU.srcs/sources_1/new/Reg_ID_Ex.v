@@ -82,13 +82,20 @@ module Reg_ID_Ex (
             ALU_Control_out <= 4'b0;
         end else if (en) begin
             if (flush) begin
-                PC_out <= PC_out;
-                Rd_addr_out <= Rd_addr_out;
-                Rs1_out <= Rs1_out;
-                Rs2_out <= Rs2_out;
-                Imm_out <= Imm_out;
-                Rs1_addr_out <= Rs1_addr_out;
-                Rs2_addr_out <= Rs2_addr_out;
+                // PC_out <= PC_out;
+                // Rd_addr_out <= Rd_addr_out;
+                // Rs1_out <= Rs1_out;
+                // Rs2_out <= Rs2_out;
+                // Imm_out <= Imm_out;
+                // Rs1_addr_out <= Rs1_addr_out;
+                // Rs2_addr_out <= Rs2_addr_out;
+                PC_out <= PC_in;
+                Rd_addr_out <= Rd_addr_in;
+                Rs1_out <= Rs1_in;
+                Rs2_out <= Rs2_in;
+                Imm_out <= Imm_in;
+                Rs1_addr_out <= Rs1_addr_in;
+                Rs2_addr_out <= Rs2_addr_in;
                 UT_out <= 1'b0;
                 MemRW_out <= 1'b0;
                 ALUSrc_B_out <= 1'b0;

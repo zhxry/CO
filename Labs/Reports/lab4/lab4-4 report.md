@@ -51,7 +51,7 @@ SCPU 控制单元在 4-3 的基础上主要有以下修改：
 2. `ImmSel` 信号增加一种情况，用于提取 CSR 指令中的立即数。
 3. 在译码过程中，对于所有的 `default` 情况，将 `illegal_inst` 置为 1 表示指令非法。
 4. 新增一级 CSR 译码模块，用于识别 CSR 指令并设置相应的信号。`Mcode` 为 `inst_in[21:20]` 用于区分 `ecall` 与 `mret` 指令。该部分代码如下：
-    
+   
     ```verilog
     // CSRWrite: 0: No, 1: Yes
     // CSR_WSC_Mode: 00: W, 01: S, 10: C
@@ -535,7 +535,7 @@ lui t1, 0xDEADB
 addi t1, t1, 0xEEF
 ```
 - 无法通过以上代码生成 `0xDEADBEEF`，因为 `addi` 中的立即数为 `12` 位**有符号**数，`0xEEF = 0b1110_1110_1111` 会被当成负数处理从而产生借位，故得到的结果是 `0xDEADAEEF`。
-- 我们可以将 `lui t1, 0xDEADB` 修改为 `lui t1, 0xDEADC` 得到 `0xDEADAEEF`。
+- 我们可以将 `lui t1, 0xDEADB` 修改为 `lui t1, 0xDEADC` 得到 `0xDEADBEEF`。
 
 ### 实验心得
 
